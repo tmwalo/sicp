@@ -1,0 +1,5 @@
+Applicative Order Evaluation:
+Requires the evaluation of subexpressions and then the application of the operatore to the operands. The subexpression "0" is already a primitive expression. The subexpression "p" evaluates to "p" when examining its body. Yet "p" is still a subexpression. By the order of evaluation, "p" will be evaluated again. This will continue forever.
+
+Normal Order Evaluation:
+Requires that procedures be expressed as combinations of primitive procedures and only then can the subexpressions be evaluated. The "test" procedure may be expressed as a combination of primitive procedures by "substituting/replacing" it with its body. The parameters of the "test" procedures will be given the values of the arguments. Since the "if" conditional is a special form, the expression will be evaluated without yet automatically evaluating its subexpressions. The predicate will be evaluated. The expression evaluates to o(the consequent) because the predicate evaluates to false. The alternative "p" is never evaluated.
