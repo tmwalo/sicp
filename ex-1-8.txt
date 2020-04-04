@@ -1,0 +1,5 @@
+Changes relative to sqrt-iter:
+
+(define (square x) (* x x))
+
+(define (improve guess x) (/ (+ (/ x (square y)) (* 2 y)) 3))
